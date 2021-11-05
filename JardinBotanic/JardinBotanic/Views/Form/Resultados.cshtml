@@ -1,0 +1,72 @@
+﻿@model IEnumerable<JardinBotanic.Models.info>
+
+@{
+    ViewBag.Title = "Resultados";
+}
+
+<h1>¡Muchas gracias por darse tiempo para completar nuestra encuesta! </h1>
+<hr />
+<img src="~/img/Arbol.jpg" style="width: 800px; height: 330px; " />
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Edad:
+        </th>
+        <th>
+            Experiencia en el parque:
+        </th>
+        <th>
+            Flor Favorita:
+        </th>
+        <th>
+            El parque es un lugar agradable:
+        </th>
+        <th>
+            Tiene flores en su casa:
+        </th>
+        <th>
+            Factores para adquirir flores silvestres:
+        </th>
+        <th>
+            Motivo por el cual adquiere flores:
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Exp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FavFlor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lugar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlorCasa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motiv)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>

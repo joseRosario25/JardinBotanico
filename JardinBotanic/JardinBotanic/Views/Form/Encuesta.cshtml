@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Encuesta";
+}
+<img src="~/img/Logo.jpg" style="width: 400px; height: 100px;" />
+
+<h1>Encuesta Sobre Flores del Jardín Botánico Nacional  </h1>
+<hr />
+
+<label>El objetivo de la presente encuesta es poder conocer la preferencia, gustos y opciones existentes en la compra de flores.</label>
+<br>
+<br>
+<form action="Resultados" method="post" enctype="multipart/form-data">
+
+    <div class="col">
+        <label>1. ¿Cuál es tu edad? (rango amplio)</label> <br>
+        <input type="radio" name="edad" value="18 años a 24 años" /> 18 años a 24 años<br>
+        <input type="radio" name="edad" value="25 años a 34 años" /> 25 años a 34 años<br>
+        <input type="radio" name="edad" value="35 años a 44 años" /> 35 años a 44 años<br>
+        <input type="radio" name="edad" value="45 años a 54 años" /> 45 años a 54 años<br>
+        <input type="radio" name="edad" value="Más de 54" /> Más de 54
+        <br>
+    </div>
+    <br>
+
+    <div class="col">
+        <label>2. ¿Cómo ha sido tu experiencia en el parque?</label> <br>
+        <input type="radio" name="exp" value="Muy buena" /> Muy buena<br>
+        <input type="radio" name="exp" value="Buena" /> Buena<br>
+        <input type="radio" name="exp" value="Regular" /> Regular<br>
+        <input type="radio" name="exp" value="Mala" /> Mala<br>
+        <input type="radio" name="exp" value="Pésima" /> Pésima
+        <br>
+    </div>
+    <br>
+
+    <div class="col">
+        <label>3. ¿Cree que el jardín Botánico es un lugar agradable?</label> <br>
+        <input type="radio" name="lugar" value="Si" /> Si<br>
+        <input type="radio" name="lugar" value="No" /> No
+        <br>
+    </div>
+    <br>
+
+    <div class="col">
+        <label>4. Indique los tipos de flor que más le gustan </label> <br>
+        <input type="checkbox" name="favFlor" value="Rosa" /> Rosa<br>
+        <input type="checkbox" name="favFlor" value="Clavel" /> Clavel<br>
+        <input type="checkbox" name="favFlor" value="Tulipán" /> Tulipán<br>
+        <input type="checkbox" name="favFlor" value="Llium" /> Llium<br>
+        <input type="checkbox" name="favFlor" value="Margaritas" /> Margaritas<br>
+        <input type="checkbox" name="favFlor" value="Orquídeas" /> Orquídeas<br>
+        <input type="checkbox" name="favFlor" value="Girasoles " /> Girasoles
+        <br>
+    </div>
+
+    <div class="col">
+        <label>5. ¿Tiene flores en su casa?</label> <br>
+        <input type="radio" name="florCasa" value="Si" /> Si<br>
+        <input type="radio" name="florCasa" value="No" /> No
+        <br>
+    </div>
+    <br>
+
+    <div class="col">
+        <label>6. ¿Qué factores considera relevantes para adquirir flores silvestres?</label> <br>
+        <input type="radio" name="fact" value="Durabilidad de las flores en casa " /> Durabilidad de las flores en casa.<br>
+        <input type="radio" name="fact" value="Variedad en los colores de las flores " /> Variedad en los colores de las flores.
+        <br>
+    </div>
+    <br>
+    <div class="col">
+        <label> 7. Indique el motivo más frecuente por el cual adquiere flores. </label> <br>
+        <input type="radio" name="motiv" value="Para adornar la casa " /> Para adornar la casa.<br>
+        <input type="radio" name="motiv" value="Como regalo de cortesía " /> Como regalo de cortesía.
+        <br>
+        <input type="radio" name="motiv" value="Para adornar la Oficina " /> Para adornar la Oficina.<br>
+        <input type="radio" name="motiv" value="Día especial (de las Madres, Los enamorados, etc) " /> Día especial (de las Madres, Los enamorados, etc).
+        <br>
+        <input type="radio" name="motiv" value="Para poder admirarlas y estar pendiente" /> Para poder admirarlas y estar pendiente.
+        <br>
+    </div>
+    <br>
+    <p class="lead">A continuación puede subir una la foto de una planta que tenga:</p>
+
+    <div class="col">
+        <input type="file" name="foto" />
+    </div>
+    <br>
+    <input type="submit" value="Enviar" />
+
+
+</form>
+
